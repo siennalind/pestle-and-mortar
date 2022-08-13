@@ -40,3 +40,5 @@ const IngList = [
         effects: ['restore stamina', 'fortify sneak', 'lingering damage magicka', 'resist frost']
     },
 ]
+
+export default IngList

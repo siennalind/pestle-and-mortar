@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import SearchResults from './SearchResults'
 
-function SearchForm() {
+function SearchForm () {
     const [userQuery, setUserQuery] = useState('')
 
     const handleSubmit = (e) => {
@@ -16,10 +16,12 @@ function SearchForm() {
     return (
         <section>
             <form onSubmit={handleSubmit}>
-            <label htmlFor="query">Search</label>
-            <input id="query" type="search" onChange={handleChange} 
-                placeholder="Enter search term" />
-            <input type="submit" value="Search" />
+                <label htmlFor="query">Search:</label>
+                <input id="query" type="search"
+                 placeholder="Enter search here" 
+                 onChange={handleChange} />
+                <input type="submit" value="search" />
+                <SearchResults query={userQuery} />
             </form>
         </section>
     )

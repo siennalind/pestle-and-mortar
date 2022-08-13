@@ -1,41 +1,36 @@
-import { useState } from 'react'
 import IngList from '../MockData/IngList'
 
-function SearchResult (props) {
+function SearchResults (props) {
     let displayResults
-    const [ingredientList, setIngredientList] = useState([])
-    const [loading, setLoading] = useState(true)
-    const [error, setError] = useState(false)
+    const ingredientList = IngList
     const searchQuery = props.query.trim().toLowerCase()
 
-    setIngredientList(IngList)
-
-    const results = ingredientList.filter(ingredient => 
-        ingredient.name.includes(searchQuery) ||
-        ingredient.effect.includes(searchQuery)
-    )
+    const results = 
+    ingredientList.filter(ingredient => 
+        ingredient.name.includes(searchQuery) || 
+        ingredient.effects.includes(searchQuery))
 
     if (!props.query) {
-        displayResults = (ingredientList.map(ingredient => {
+        displayResults = (ingredientList.map(ingredient => (
             <article>
                 <p>{ingredient.name}</p>
                 <ul>
-                    <li>{ingredient.effects[0]}</li>
-                    <li>{ingredient.effects[1]}</li>
-                    <li>{ingredient.effects[2]}</li>
-                    <li>{ingredient.effects[3]}</li>
+                <li>{ingredient.effects[0]}</li>
+                <li>{ingredient.effects[1]}</li>
+                <li>{ingredient.effects[2]}</li>
+                <li>{ingredient.effects[3]}</li>
                 </ul>
             </article>
-        }))
+        )))
     } else if (results.length > 0) {
         displayResults = (results.map(ingredient => (
             <article>
                 <p>{ingredient.name}</p>
                 <ul>
-                    <li>{ingredient.effects[0]}</li>
-                    <li>{ingredient.effects[1]}</li>
-                    <li>{ingredient.effects[2]}</li>
-                    <li>{ingredient.effects[3]}</li>
+                <li>{ingredient.effects[0]}</li>
+                <li>{ingredient.effects[1]}</li>
+                <li>{ingredient.effects[2]}</li>
+                <li>{ingredient.effects[3]}</li>
                 </ul>
             </article>
         )))
@@ -45,10 +40,11 @@ function SearchResult (props) {
 
     return (
         <section>
-            {loading && <p>Loading</p>}
-            {error && <p>There was an error, please try again later</p>}
+        {/* {loading && <p>Loading</p>}
+        {error && <p>There was an error, please try again later.</p>} */}
+        {ingredientList && <div>{displayResults}</div>}
         </section>
     )
 }
 
-export default SearchResult
+export default SearchResults
