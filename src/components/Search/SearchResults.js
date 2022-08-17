@@ -1,8 +1,9 @@
+import useFetch from './useFetch'
 import IngList from '../MockData/IngList'
 
 function SearchResults (props) {
     let displayResults
-    const ingredientList = IngList
+    const ingredientList = useFetch('http://localhost:3001/ingredients')
     const searchQuery = props.query.trim().toLowerCase()
 
     const results = 
