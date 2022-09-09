@@ -10,7 +10,6 @@ const useFetch = (URL) => {
     })
 
     return data;
-
 }
 
 export default useFetch

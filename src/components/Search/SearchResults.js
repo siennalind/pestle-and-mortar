@@ -3,16 +3,16 @@ import IngList from '../MockData/IngList'
 
 function SearchResults (props) {
     let displayResults
-    const ingredientList = useFetch('http://localhost:3001/ingredients')
+//    const ingredientList = useFetch('http://localhost:3001/ingredients')
     const searchQuery = props.query.trim().toLowerCase()
 
     const results = 
-    ingredientList.filter(ingredient => 
+    IngList.filter(ingredient => 
         ingredient.name.includes(searchQuery) || 
         ingredient.effects.includes(searchQuery))
 
     if (!props.query) {
-        displayResults = (ingredientList.map(ingredient => (
+        displayResults = (IngList.map(ingredient => (
             <article>
                 <p>{ingredient.name}</p>
                 <ul>
@@ -43,7 +43,7 @@ function SearchResults (props) {
         <section>
         {/* {loading && <p>Loading</p>}
         {error && <p>There was an error, please try again later.</p>} */}
-        {ingredientList && <div>{displayResults}</div>}
+        {IngList && <div>{displayResults}</div>}
         </section>
     )
 }

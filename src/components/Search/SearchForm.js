@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import SearchResults from './SearchResults'
+import Clear from '../Clear'
 
 function SearchForm () {
     const [userQuery, setUserQuery] = useState('')
@@ -20,7 +21,7 @@ function SearchForm () {
                 <input id="query" type="search"
                  placeholder="Enter search here" 
                  onChange={handleChange} />
-                <input type="submit" value="search" />
+                 <Clear />
                 <SearchResults query={userQuery} />
             </form>
         </section>
