@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import SearchResults from './SearchResults'
-import Clear from '../Clear'
+import Button from '../Button'
 
 function SearchForm () {
     const [userQuery, setUserQuery] = useState('')
@@ -14,6 +14,10 @@ function SearchForm () {
         setUserQuery(e.target.value)
     }
 
+    const handleClear = (e) => {
+        e.target.value('')
+    }
+
     return (
         <section>
             <form onSubmit={handleSubmit}>
@@ -21,7 +25,7 @@ function SearchForm () {
                 <input id="query" type="search"
                  placeholder="Enter search here" 
                  onChange={handleChange} />
-                 <Clear />
+                 <Button  onClick={handleClear} text="Clear" />
                 <SearchResults query={userQuery} />
             </form>
         </section>

@@ -1,5 +1,7 @@
 import useFetch from './useFetch'
 import IngList from '../MockData/IngList'
+import Button from '../Button'
+import Card from '../Card'
 
 function SearchResults (props) {
     let displayResults
@@ -13,27 +15,23 @@ function SearchResults (props) {
 
     if (!props.query) {
         displayResults = (IngList.map(ingredient => (
-            <article>
-                <p>{ingredient.name}</p>
-                <ul>
-                <li>{ingredient.effects[0]}</li>
-                <li>{ingredient.effects[1]}</li>
-                <li>{ingredient.effects[2]}</li>
-                <li>{ingredient.effects[3]}</li>
-                </ul>
-            </article>
+            <Card 
+                name={ingredient.name}
+                firstEffect={ingredient.effects[0]}
+                secondEffect={ingredient.effects[1]}
+                thirdEffect={ingredient.effects[2]}
+                fourthEffect={ingredient.effects[3]}
+            />
         )))
     } else if (results.length > 0) {
         displayResults = (results.map(ingredient => (
-            <article>
-                <p>{ingredient.name}</p>
-                <ul>
-                <li>{ingredient.effects[0]}</li>
-                <li>{ingredient.effects[1]}</li>
-                <li>{ingredient.effects[2]}</li>
-                <li>{ingredient.effects[3]}</li>
-                </ul>
-            </article>
+            <Card 
+                name={ingredient.name}
+                firstEffect={ingredient.effects[0]}
+                secondEffect={ingredient.effects[1]}
+                thirdEffect={ingredient.effects[2]}
+                fourthEffect={ingredient.effects[3]}
+            />
         )))
     } else {
         displayResults = (<p>No matching results</p>)
