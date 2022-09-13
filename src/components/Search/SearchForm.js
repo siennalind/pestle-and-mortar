@@ -25,7 +25,6 @@ function SearchForm () {
                 <input id="query" type="search"
                  placeholder="Enter search here" 
                  onChange={handleChange} />
-                 <Button  onClick={handleClear} text="Clear" />
                 <SearchResults query={userQuery} />
             </form>
         </section>
