@@ -1,12 +1,12 @@
 import { useState } from 'react'
 
 function Favourites () {
-    const [favourites, setFavourites] = useState([])
+    const [favouritesList, setFavouritesList] = useState([])
 
-    const handleFavourite = () => {}
+    const toggleFavourite = () => {}
 
     return (
-        {favourites}
+        {favouritesList}
     )
 }
 

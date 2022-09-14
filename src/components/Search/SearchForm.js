@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import SearchResults from './SearchResults'
-import Button from '../Button'
 
 function SearchForm () {
     const [userQuery, setUserQuery] = useState('')
