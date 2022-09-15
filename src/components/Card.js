@@ -1,8 +1,8 @@
-import Button from "./Button"
+import AddFavourite from "./AddFavourite"
 
 function Card (props) {
     return (
-        <article>
+        <article key={props.id}>
             <p>{props.name}</p>
             <ul>
                 <li>{props.firstEffect}</li>
@@ -10,7 +10,7 @@ function Card (props) {
                 <li>{props.thirdEffect}</li>
                 <li>{props.fourthEffect}</li>
             </ul>
-            <Button onClick={props.handleClick} text="Favourite" />
+            <AddFavourite />
         </article>
     )
 }
