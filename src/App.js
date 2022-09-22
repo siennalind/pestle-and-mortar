@@ -1,14 +1,16 @@
 import SearchForm from "./components/Search/SearchForm";
-import FavouritesPage from "./components/FavouritesPage";
+import Favourites from "./pages/Favourites";
 import {
   BrowserRouter,
   Routes,
   Route,
   Link
 } from "react-router-dom";
+import { FavouritesContextProvider } from './store/fav-context'
 
 function App() {
   return (
+    <FavouritesContextProvider>
       <BrowserRouter>
         <div>
           <nav>
@@ -21,15 +23,14 @@ function App() {
               </li>
             </ul>
           </nav>
-  
-          {/* A <Switch> looks through its children <Route>s and
-              renders the first one that matches the current URL. */}
+
           <Routes>
             <Route path="/" element={<SearchForm />} />
-            <Route path="/favourites" element={<FavouritesPage />} />
+            <Route path="/favourites" element={<Favourites />} />
           </Routes>
         </div>
       </BrowserRouter>
+    </FavouritesContextProvider>
     )
 }
 
