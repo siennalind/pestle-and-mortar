@@ -11,7 +11,11 @@ function IngredientItem (props) {
         } else {
             favContext.addFavourite({
                 id: props.id,
-                name: props.name
+                name: props.name,
+                firstEffect: props.firstEffect,
+                secondEffect: props.secondEffect,
+                thirdEffect: props.thirdEffect,
+                fourthEffect: props.fourthEffect
             })
         }
     }

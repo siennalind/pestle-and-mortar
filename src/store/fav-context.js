@@ -30,9 +30,22 @@ export function FavouritesContextProvider (props) {
         return favouriteItems.some(item => item.id === itemId)
     }
 
-    function setLocalStorage () {}
+    function setLocalStorage (key, value) {
+        try {
+            window.localStoraget.setItem(key, JSON.stringify(value))
+        } catch(error) {
+            console.log(error)
+        }
+    }
 
-    function getLocalStorage() {}
+    function getLocalStorage(key, initialValue) {
+        try {
+            const value = window.localStorage.getItem(key)
+            return value ? JSON.parse(value) : initialValue
+        } catch (error) {
+            return initialValue
+        }
+    }
 
     return (<FavouritesContext.Provider value={context}>
         {props.children}
