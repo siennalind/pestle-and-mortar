@@ -1,11 +1,15 @@
-import { createContext, useState } from 'react'
+import { createContext, useState, useEffect } from 'react'
 
 const FavouritesContext = createContext({
     favourites: []
 })
 
 export function FavouritesContextProvider (props) {
-    const [favouriteItems, setFavouriteItems] = useState([])
+    const [favouriteItems, setFavouriteItems] = useState(() => getLocalStorage("favourite", []))
+
+    useEffect(() => {
+        setLocalStorage("favourite", favouriteItems);
+      }, [favouriteItems]);
 
     const context = {
         favourites: favouriteItems,
@@ -32,7 +36,7 @@ export function FavouritesContextProvider (props) {
 
     function setLocalStorage (key, value) {
         try {
-            window.localStoraget.setItem(key, JSON.stringify(value))
+            window.localStorage.setItem(key, JSON.stringify(value))
         } catch(error) {
             console.log(error)
         }

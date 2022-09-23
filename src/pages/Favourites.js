@@ -7,7 +7,13 @@ function Favourites () {
     return (
         <>
             {favContext.favourites.map(item => (
+                <article>
                 <p>{item.name}</p>
+                <p>{item.firstEffect}</p>
+                <p>{item.secondEffect}</p>
+                <p>{item.thirdEffect}</p>
+                <p>{item.fourthEffect}</p>
+                </article>
             ))}
         </>
     )
