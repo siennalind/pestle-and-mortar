@@ -10,6 +10,7 @@ function IngredientItem (props) {
             favContext.removeFavourite(props.id)
         } else {
             favContext.addFavourite({
+                key: props.id,
                 id: props.id,
                 name: props.name,
                 firstEffect: props.firstEffect,

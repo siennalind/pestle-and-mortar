@@ -1,13 +1,13 @@
 import IngList from "../MockData/IngList"
 import IngredientItem from "./IngredientItem"
 
-function IngredientList () {
-    const ingredientList = IngList
-    // useFetch('http://localhost:3001/ingredients'
+function IngredientList (props) {
+//    const ingredientList = IngList
+    // useFetch('http://localhost:3001/ingredients' 
 
     return (
         <ul>
-            {ingredientList.map(ingredient => 
+            {props.ingredientList.map(ingredient => 
             <IngredientItem 
                 key={ingredient.id}
                 id={ingredient.id}
