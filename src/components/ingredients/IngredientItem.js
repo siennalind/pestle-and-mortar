@@ -1,5 +1,6 @@
 import { useContext } from 'react'
 import FavouritesContext from '../../store/fav-context'
+import styles from '../../styles/Items.module.css'
 
 function IngredientItem (props) {
     const favContext = useContext(FavouritesContext)
@@ -22,12 +23,12 @@ function IngredientItem (props) {
     }
 
     return (
-        <li key={props.id}>
-            <p>{props.name}</p>
-                <p>{props.firstEffect}</p>
-                <p>{props.secondEffect}</p>
-                <p>{props.thirdEffect}</p>
-                <p>{props.fourthEffect}</p>
+        <li className={styles.item} key={props.id}>
+            <p className={styles.name}>{props.name}</p>
+                <p className={styles.info}>{props.firstEffect}</p>
+                <p className={styles.info}>{props.secondEffect}</p>
+                <p className={styles.info}>{props.thirdEffect}</p>
+                <p className={styles.info}>{props.fourthEffect}</p>
             <button onClick={toggleFavourite}>
                 {itemIsFavourite ? 'Remove' : 'Favourite'}
             </button>

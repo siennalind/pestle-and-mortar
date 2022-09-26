@@ -1,11 +1,17 @@
+import { Link } from "react-router-dom"
+
 function Nav () {
     return (
-        <Nav>
-            <ul>
-                <li>Search</li>
-                <li>Favourites</li>
-            </ul>
-        </Nav>
+        <nav>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/favourites">Favourites</Link>
+          </li>
+        </ul>
+      </nav>
     )
 }
 

@@ -1,0 +1,13 @@
+.items {
+    border-radius: 12px;
+}
+
+.name {
+    font-family: 'Palatino';
+    font-size: 1.25rem;
+}
+
+.info {
+    font-family: 'Century Gothic';
+    font-size: 1rem;
+}

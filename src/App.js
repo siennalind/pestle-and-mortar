@@ -3,26 +3,17 @@ import Favourites from "./pages/Favourites";
 import {
   BrowserRouter,
   Routes,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import { FavouritesContextProvider } from './store/fav-context'
+import Nav from "./components/Layout/Nav";
 
 function App() {
   return (
     <FavouritesContextProvider>
       <BrowserRouter>
         <div>
-          <nav>
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/favourites">Favourites</Link>
-              </li>
-            </ul>
-          </nav>
+          <Nav />
 
           <Routes>
             <Route path="/" element={<SearchForm />} />
