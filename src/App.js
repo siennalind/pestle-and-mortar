@@ -6,7 +6,9 @@ import {
   Route
 } from "react-router-dom";
 import { FavouritesContextProvider } from './store/fav-context'
-import Nav from "./components/Layout/Nav";
+import Nav from "./components/Layout/Nav"
+import './styles/reset.css'
+import './styles/general.css'
 
 function App() {
   return (

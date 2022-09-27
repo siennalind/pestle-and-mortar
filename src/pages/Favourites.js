@@ -1,5 +1,6 @@
 import { useContext } from 'react'
 import FavouritesContext from '../store/fav-context'
+import styles from '../styles/Items.module.css'
 
 function Favourites () {
     const favContext = useContext(FavouritesContext)
@@ -8,11 +9,11 @@ function Favourites () {
         <>
             {favContext.favourites.map(item => (
                 <li key={item.id}>
-                <p>{item.name}</p>
-                <p>{item.firstEffect}</p>
-                <p>{item.secondEffect}</p>
-                <p>{item.thirdEffect}</p>
-                <p>{item.fourthEffect}</p>
+                <p className={styles.name}>{item.name}</p>
+                <p className={styles.info}>{item.firstEffect}</p>
+                <p className={styles.info}>{item.secondEffect}</p>
+                <p className={styles.info}>{item.thirdEffect}</p>
+                <p className={styles.info}>{item.fourthEffect}</p>
                 </li>
             ))}
         </>

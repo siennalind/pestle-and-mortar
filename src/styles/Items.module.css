@@ -3,11 +3,28 @@
 }
 
 .name {
-    font-family: 'Palatino';
     font-size: 1.25rem;
+    font-weight: bold;
 }
 
 .info {
-    font-family: 'Century Gothic';
     font-size: 1rem;
+}
+
+.name, .info {
+    text-transform: capitalize;
+}
+
+.btn {
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    border: 3px solid;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: white;
+    color: black;
 }
