@@ -5,10 +5,10 @@ function Nav () {
     return (
         <nav>
         <ul className={styles.nav}>
-          <li>
+          <li className={styles.link}>
             <Link to="/">Home</Link>
           </li>
-          <li>
+          <li className={styles.link}>
             <Link to="/favourites">Favourites</Link>
           </li>
         </ul>

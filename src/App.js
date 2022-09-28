@@ -6,13 +6,15 @@ import {
   Route
 } from "react-router-dom";
 import { FavouritesContextProvider } from './store/fav-context'
-import Nav from "./components/Layout/Nav"
+import Nav from "./components/layout/Nav"
 import './styles/reset.css'
 import './styles/general.css'
+import Header from './components/layout/Header'
 
 function App() {
   return (
     <FavouritesContextProvider>
+    <Header />
       <BrowserRouter>
         <div>
           <Nav />

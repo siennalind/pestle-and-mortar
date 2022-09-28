@@ -1,4 +1,4 @@
-import IngList from "../MockData/IngList"
+import styles from '../../styles/List.module.css'
 import IngredientItem from "./IngredientItem"
 
 function IngredientList (props) {
@@ -6,7 +6,7 @@ function IngredientList (props) {
     // useFetch('http://localhost:3001/ingredients' 
 
     return (
-        <ul>
+        <ul className={styles.container}>
             {props.ingredientList.map(ingredient => 
             <IngredientItem 
                 key={ingredient.id}
