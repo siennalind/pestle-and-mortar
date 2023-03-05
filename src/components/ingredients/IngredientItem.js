@@ -30,7 +30,7 @@ function IngredientItem (props) {
                 <p className={styles.info}>{props.thirdEffect}</p>
                 <p className={styles.info}>{props.fourthEffect}</p>
             <button className={styles.btn} onClick={toggleFavourite}>
-                {itemIsFavourite ? 'Remove' : 'Favourite'}
+                {itemIsFavourite ? 'Unfavourite' : 'Favourite'}
             </button>
         </li>
     )
