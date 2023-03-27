@@ -7,10 +7,14 @@
 }
 
 .form > label {
+    font-family: "Imprima", sans-serif;
+    font-size: 1.25rem;
     margin: 0.15rem auto;
 }
 
 .form > input {
+    font-family: "Imprima", sans-serif;
+    font-size: 1.25rem;
     padding: 0.25rem;
     margin: 0.15rem auto;
     width: 80%;

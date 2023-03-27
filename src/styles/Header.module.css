@@ -1,5 +1,6 @@
 .header {
+    font-family: "Gabriela", serif;
     font-size: clamp(1.5rem, 10vw, 3.5rem);
     text-align: center;
-    margin-top: 1rem;
+    margin-top: 1.75rem;
 }
