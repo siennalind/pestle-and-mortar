@@ -1,22 +1,24 @@
+.menu {
+    background-color: hsl(288, 58%, 25%);
+}
+
 .nav {
     display: flex;
     gap: 2rem;
     margin: 1.5rem auto;
     max-width: 1000px;
     justify-content: center;
+    padding: 0.5em 0.25em;
 }
 
 .link > a {
-    color: black;
-    background-color: white;
-    padding: 0.25rem 0.5rem;
-    border: 3px solid black;
+    color: white;
     font-family: "Imprima", sans-serif;
     font-size: 1.25rem;
     font-weight: bold;
 }
 
-.link > a:hover {
-    color: white;
-    background-color: black;
+.link > a:hover,
+.link > a:active {
+    opacity: 0.6;
 }

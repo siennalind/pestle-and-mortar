@@ -3,7 +3,7 @@ import styles from '../../styles/Nav.module.css'
 
 function Nav () {
     return (
-        <nav>
+        <nav className={styles.menu}>
         <ul className={styles.nav}>
           <li className={styles.link}>
             <Link to="/">Home</Link>
