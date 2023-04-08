@@ -1,5 +1,5 @@
 .menu {
-    background-color: hsl(288, 58%, 25%);
+    background-color: #4F2A79;
 }
 
 .nav {
@@ -8,11 +8,11 @@
     margin: 1.5rem auto;
     max-width: 1000px;
     justify-content: center;
-    padding: 0.5em 0.25em;
+    padding: 1.25em 0.25em;
 }
 
 .link > a {
-    color: white;
+    color: #efe6fe;
     font-family: "Imprima", sans-serif;
     font-size: 1.25rem;
     font-weight: bold;
