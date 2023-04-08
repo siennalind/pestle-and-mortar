@@ -3,4 +3,5 @@
     font-size: clamp(1.5rem, 10vw, 3.5rem);
     text-align: center;
     margin-top: 1.75rem;
+    color: hsl(221, 100%, 17%);
 }
