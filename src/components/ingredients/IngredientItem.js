@@ -8,11 +8,11 @@ function IngredientItem (props) {
 
     const toggleFavourite = () => {
         if (itemIsFavourite) {
-            favContext.removeFavourite(props.id)
+            favContext.removeFavourite(props.name)
         } else {
             favContext.addFavourite({
-                key: props.id,
-                id: props.id,
+                key: props.name,
+                id: props.name,
                 name: props.name,
                 firstEffect: props.firstEffect,
                 secondEffect: props.secondEffect,
@@ -23,7 +23,7 @@ function IngredientItem (props) {
     }
 
     return (
-        <li className={styles.item} key={props.id}>
+        <li className={styles.item} key={props.name}>
             <p className={styles.name}>{props.name}</p>
                 <p className={styles.info}>{props.firstEffect}</p>
                 <p className={styles.info}>{props.secondEffect}</p>

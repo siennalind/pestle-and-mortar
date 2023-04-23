@@ -4,11 +4,11 @@ import IngredientList from '../ingredients/IngredientList'
 
 function SearchResults (props) {
     const ingList = IngList
-//    const ingredientList = useFetch('http://localhost:3001/ingredients')
+    const ingredientList = useFetch('http://localhost:3001/ingredients')
     const searchQuery = props.query.trim().toLowerCase()
 
  const results = 
- ingList.filter(ingredient => 
+ ingredientList.filter(ingredient => 
      ingredient.name.includes(searchQuery) || 
      ingredient.effects.includes(searchQuery))
 
