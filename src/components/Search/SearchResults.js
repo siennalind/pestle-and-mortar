@@ -2,7 +2,7 @@ import useFetch from './useFetch'
 import IngredientList from '../ingredients/IngredientList'
 
 function SearchResults (props) {
-    const ingredientList = useFetch('https://pestle-server.onrender.com')
+    const ingredientList = useFetch('https://pestle-server.onrender.com/ingredients')
     const searchQuery = props.query.trim().toLowerCase()
 
  const results = 
