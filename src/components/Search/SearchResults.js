@@ -1,15 +1,11 @@
-import useFetch from './useFetch'
+// import useFetch from './useFetch'
 import IngredientList from '../ingredients/IngredientList'
+import IngList from '../MockData/IngList'
 import { useState } from 'react'
 
 function SearchResults (props) {
-    const ingredientList = useFetch('https://pestle-server.onrender.com/ingredients')
+    const ingredientList = IngList
     const searchQuery = props.query.trim().toLowerCase()
-    const [isLoading, setIsLoading] = useState(true)
-
-    if (ingredientList.length > 0) {
-        setIsLoading(false)
-    }
 
  const results = 
  ingredientList.filter(ingredient => 
@@ -18,9 +14,7 @@ function SearchResults (props) {
 
     return (
         <section>
-        {isLoading ? 
-        <p>Please wait, loading results...</p> : 
-        <IngredientList ingredientList={results} />}
+        <IngredientList ingredientList={results} />
         </section>
     )
 }
